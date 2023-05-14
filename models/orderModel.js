@@ -45,7 +45,7 @@ const orderSchema = new mongoose.Schema(
     },
     address: {
       type: String,
-      required: [true, "name field is required"],
+      required: [true, "address field is required"],
     },
   },
   {
