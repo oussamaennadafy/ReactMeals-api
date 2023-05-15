@@ -5,7 +5,8 @@ const getIpAdress = require("./helper/getIpAddress");
 
 const IP = getIpAdress();
 
-process.on("uncaughtException", (err) => {
+process.on("uncaughtException", (err) =>
+{
   console.log("UNCAUGHT EXCEPTION! 💥 Shutting down...");
   console.log(err.name, err.message);
   process.exit(1);
@@ -17,16 +18,19 @@ const connectDB = require("./config/database");
 connectDB();
 
 const port = process.env.PORT || 3000;
-const server = app.listen(port, IP, () => {
+const server = app.listen(port, IP, () =>
+{
   console.log(
     `Server running in ${process.env.NODE_ENV} mode on http://${IP}:${port} ...`
   );
 });
 
-process.on("unhandledRejection", (err) => {
+process.on("unhandledRejection", (err) =>
+{
   console.log("UNHANDLED REJECTION! 💥 Shutting down...");
   console.log(err.name, err.message);
-  server.close(() => {
+  server.close(() =>
+  {
     process.exit(1);
   });
 });
