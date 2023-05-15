@@ -9,7 +9,7 @@ const orderSchema = new mongoose.Schema(
         type: [
           {
             id: {
-              type: Number,
+              type: String,
               required: [true, "id of item is required"],
             },
             quantity: {
@@ -24,7 +24,8 @@ const orderSchema = new mongoose.Schema(
         ],
         required: [true, "please add items field"],
         validate: {
-          validator: function (items) {
+          validator: function (items)
+          {
             return items.length > 0;
           },
           message: "items list is empty",
