@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
-    "build": "set NODE_ENV=production",
+    "build": "set NODE_ENV=production & npm install",
     "start:prod": "set NODE_ENV=production & nodemon index"
   },
   "keywords": [],
