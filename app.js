@@ -32,7 +32,7 @@ app.use("/api/v1/orders", ordersRouter);
 
 app.all("*", (req, res, next) =>
 {
-  next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
+  next(new AppError(`Can't find ${req.originalUrl} with ${req.method} method on this server!`, 404));
 });
 
 app.use(globalErrorHandler);

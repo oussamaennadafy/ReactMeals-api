@@ -18,10 +18,10 @@ const connectDB = require("./config/database");
 connectDB();
 
 const port = process.env.PORT || 3000;
-const server = app.listen(port, IP, () =>
+const server = app.listen(port, () =>
 {
   console.log(
-    `Server running in ${process.env.NODE_ENV} mode on http://${IP}:${port} ...`
+    `Server running in ${process.env.NODE_ENV} mode...`
   );
 });
 

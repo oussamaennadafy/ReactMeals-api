@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
-    "vercel-build": "echo hello",
+    "build": "set NODE_ENV=production",
     "start:prod": "set NODE_ENV=production & nodemon index"
   },
   "keywords": [],
