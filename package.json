@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",
-    "build": "set NODE_ENV=production & npm install",
+    "build": "npm install compression cors dotenv express mongoose morgan",
     "start:prod": "set NODE_ENV=production & nodemon index"
   },
   "keywords": [],
